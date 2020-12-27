@@ -1,4 +1,53 @@
 .contentHolder {
-  max-width: 1920px;
+  position: relative;
+  max-width: 1520px;
   margin: 0 auto;
+  height: 3000px;
+}
+
+.fixed {
+  position: fixed;
+  width: 92px;
+  height: 180px;
+  top: 50%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.fixedLeft {
+  background-image: url('/layout/left.png');
+  left: 0;
+}
+
+.fixedRight {
+  background-image: url('/layout/right.png');
+  right: 0;
+}
+
+.paragraphLeft {
+  transform: rotate(90deg) translate(90px, 64px);
+  margin: 0;
+  width: 180px;
+  text-align: center;
+  color: black;
+  text-transform: uppercase;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.paragraphRight {
+  transform: rotate(-90deg) translate(-80px, -26px);
+  margin: 0;
+  width: 180px;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 13px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .fixed {
+    display: none;
+  }
 }

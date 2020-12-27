@@ -9,6 +9,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  overflow-y: hidden;
 }
 
 .titleHolder {
@@ -35,4 +36,13 @@
   text-transform: uppercase;
   padding-top: 24px;
   margin: 0;
+}
+
+.top {
+  position: absolute;
+  top: -150px;
+  transform: rotate(45deg);
+  width: 200px;
+  height: 200px;
+  background-color: white;
 }
