@@ -1,9 +1,12 @@
 import Layout from './Components/Layout'
+import Hero from './Components/Hero'
 
-export default function Home() {
+const Home = () =>  {
   return (
     <Layout>
-			<div>Lu</div>
+			<Hero />
 		</Layout>
 	)
 }
+
+export default Home

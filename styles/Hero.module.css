@@ -1,0 +1,38 @@
+.heroHolder {
+  background-image: url('/hero/hero.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+  height: 750px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.titleHolder {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.pizzeriaName {
+  font-size: 72px;
+  letter-spacing: 11px;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 16px;
+  border-bottom: 1px solid;
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+.pizzeriaDesc {
+  font-size: 18px;
+  text-transform: uppercase;
+  padding-top: 24px;
+  margin: 0;
+}
