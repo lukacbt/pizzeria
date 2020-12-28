@@ -1,10 +1,12 @@
-import Layout from './Components/Layout'
-import Hero from './Components/Hero'
+import Layout from './components/Layout'
+import Hero from './components/Hero'
+import Menu from './components/Menu'
 
 const Home = () =>  {
   return (
     <Layout>
 			<Hero />
+      <Menu />
 		</Layout>
 	)
 }

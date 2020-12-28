@@ -10,10 +10,11 @@ const Navbar = () => {
   const handleClick = (e) => {
     setActiveNav(e.target.innerHTML)
   }
-
-  window.addEventListener('scroll', () => {
-    setScroll(window.scrollY)
-  })
+  useEffect(() => {
+    window.addEventListener('scroll', () => {
+      setScroll(window.scrollY)
+    })
+  }, [])
 
   return (
     <div className={`${navbarHolder} ${scroll >= 100 && navbarShadow}`}>

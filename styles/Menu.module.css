@@ -1,0 +1,66 @@
+.menuHolder {
+  display: flex;
+}
+
+.menuLeft {
+  width: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.menuLeftHolder {
+  padding: 0 70px 30px 15px;
+}
+
+.menuTitle {
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  letter-spacing: 7.2px;
+  text-transform: uppercase;
+  text-align: left;
+  color: black;
+}
+
+.menuParagraph {
+  margin: 0 0 50px;
+  line-height: 30px;
+  color: #777777;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.menuButton {
+  line-height: 48px;
+  background-color: #ad9966;
+  border: 1px solid #ad9966;
+  color: white;
+  cursor: pointer;
+  width: 198px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  transition: all ease-in-out 0.3s;
+}
+
+.menuButton:hover {
+  background-color: white;
+  color: #ad9966;
+}
+
+.menuRight {
+  padding: 0 15px;
+  width: 50%;
+  height: 100%;
+}
+
+.menuRightHolder {
+  background-color: #faf5f0;
+  height: 100%;
+  padding: 120px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
