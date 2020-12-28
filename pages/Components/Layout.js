@@ -8,13 +8,13 @@ const Layout = props => {
 
   return (
     <span>
+      <Navbar />
       <div className={contentHolder}>
         <div className={`${fixedLeft} ${fixed}`}>
           <p className={`${paragraphLeft} roboto`}>Cijeli Meni</p></div>
         <div className={`${fixedRight} ${fixed}`}>
           <p className={`${paragraphRight} roboto`}>Rezerviraj Stol</p>
         </div>
-        <Navbar />
         {props.children}
         <Footer />
       </div>

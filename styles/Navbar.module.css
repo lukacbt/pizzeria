@@ -1,0 +1,48 @@
+.navbarHolder {
+  height: 100px;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+  transition: box-shadow ease-in-out 0.4s;
+}
+
+.navbarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 1520px;
+  margin: 0 auto;
+}
+
+.navbarShadow {
+  box-shadow: -21.213px 21.213px 30px 0px rgba(158, 158, 158, 0.3);
+}
+
+.eachNavHolder {
+  width: calc(50% - 60px);
+  display: flex;
+  justify-content: center;
+}
+
+.eachNav {
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.eachNav:hover {
+  color: #ad9966;
+  transition: color ease-in-out 0.3s;
+}
+
+.eachNav.active {
+  color: #ad9966;
+}
+
+.eachNav:not(:last-child) {
+  margin-right: 32px;
+}
