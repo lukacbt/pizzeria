@@ -5,13 +5,14 @@ import { dishes } from './dishes'
 
 const Menu = () => {
   const { menuHolder, menuLeft, menuTitle, menuParagraph, menuButton, menuLeftHolder, menuRight, menuRightHolder } = styles
+  
   return (
-    <div className={`${menuHolder} inner-width`}>
+    <div id="Menu" className={`${menuHolder} inner-width`}>
       <div className={`${menuLeft}`}>
         <div className={`${menuLeftHolder}`}>
-          <h1 className={`${menuTitle} playFair`}>Daily food courses with drinks</h1>
+          <h1 className={`${menuTitle} playFair`}>Come to Mama - Mama Knows Best</h1>
           <p className={`${menuParagraph} roboto`}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <a className={`${menuButton} roboto`} href="#">Preuzmi meni</a>
+          <a className={`${menuButton} roboto`} href="#">Cijeli menu</a>
         </div>
       </div>
       <div className={`${menuRight}`}>

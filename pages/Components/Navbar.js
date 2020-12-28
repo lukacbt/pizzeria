@@ -3,16 +3,24 @@ import styles from '../../styles/Navbar.module.css'
 
 const Navbar = () => {
   const { navbarHolder, navbarContainer, navbarShadow, eachNavHolder, eachNav, active } = styles
-  const navLeft = ['Početna', 'O Nama']
-  const navRight = ['Meni', 'Kontakt', 'Rezerviraj']
+  const navLeft = ['Početna', 'O Nama', 'Menu']
+  const navRight = ['Galerija', 'Rezerviraj', 'Kontakt']
   const [ activeNav, setActiveNav ] = useState('Početna')
   const [ scroll, setScroll ] = useState(0)
   const handleClick = (e) => {
     setActiveNav(e.target.innerHTML)
+    const menu = document.getElementById(e.target.innerHTML)
+    menu?.scrollIntoView({ behavior: 'smooth'})
+    console.log(window.scrollY)
   }
   useEffect(() => {
     window.addEventListener('scroll', () => {
       setScroll(window.scrollY)
+      if (window.scrollY >= 850 && window.scrollY < 1800) {
+        setActiveNav('Menu')
+      } else {
+        setActiveNav('Početna')
+      }
     })
   }, [])
 
@@ -23,7 +31,6 @@ const Navbar = () => {
           {
             navLeft.map(nav => (
               <a 
-                href={`#${nav}`}
                 key={nav}
                 className={`${eachNav} ${activeNav === nav && active} roboto`} 
                 onClick={handleClick}
@@ -38,7 +45,6 @@ const Navbar = () => {
           {
             navRight.map(nav => (
               <a 
-                href={`#${nav}`}
                 key={nav}
                 className={`${eachNav} ${activeNav === nav && active} roboto`} 
                 onClick={handleClick}

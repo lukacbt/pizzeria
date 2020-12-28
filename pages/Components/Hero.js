@@ -5,7 +5,7 @@ const Hero = () => {
   const { heroHolder, titleHolder, pizzeriaName, pizzeriaDesc, top } = styles
 
   return (
-    <div className={heroHolder}>
+    <div id="Početna" className={heroHolder}>
       <div className={titleHolder}>
         <h2 className={`${pizzeriaName} playFair`}>Come To Mama</h2>
         <h3 className={`${pizzeriaDesc} roboto`}>A fine dinning restaurant</h3>
