@@ -11,7 +11,6 @@ const Navbar = () => {
     setActiveNav(e.target.innerHTML)
     const menu = document.getElementById(e.target.innerHTML)
     menu?.scrollIntoView({ behavior: 'smooth'})
-    console.log(window.scrollY)
   }
   useEffect(() => {
     window.addEventListener('scroll', () => {
