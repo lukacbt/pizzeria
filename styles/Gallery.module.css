@@ -1,0 +1,69 @@
+.galleryHolder {
+  display: flex;
+  padding: 240px 0 90px;
+}
+
+.galleryLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 55%;
+  padding: 15px;
+  margin-top: -360px;
+}
+
+.galleryRight {
+  width: 45%;
+  padding: 15px;
+}
+
+.firstPicHolder {
+  height: 780px;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.secondPicHolder {
+  height: 545px;
+  width: 85%;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.thirdPicHolder {
+  height: 545px;
+  width: 85%;
+  overflow: hidden;
+}
+.fourthPicHolder {
+  height: 583px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.eachPic {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform ease-in-out 0.4s;
+}
+
+.firstPic {
+  background-image: url('/gallery/1.jpg');
+}
+.secondPic {
+  background-image: url('/gallery/2.jpg');
+}
+.thirdPic {
+  background-image: url('/gallery/3.jpg');
+}
+.fourthPic {
+  background-image: url('/gallery/4.jpg');
+  background-position: left;
+}
+
+.firstPic:hover, .secondPic:hover, .thirdPic:hover, .fourthPic:hover {
+  transform: scale(1.1);
+}

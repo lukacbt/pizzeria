@@ -12,7 +12,7 @@ const Menu = () => {
         <div className={`${menuLeftHolder}`}>
           <h1 className={`${menuTitle} playFair`}>Come to Mama - Mama Knows Best</h1>
           <p className={`${menuParagraph} roboto`}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-          <a className={`${menuButton} roboto`} href="#">Cijeli menu</a>
+          <a className={`${menuButton} roboto`} href="/comeToMamaPDF.pdf">Cijeli menu</a>
         </div>
       </div>
       <div className={`${menuRight}`}>
