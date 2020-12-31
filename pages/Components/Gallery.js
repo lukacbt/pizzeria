@@ -1,24 +1,100 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import styles from '../../styles/Gallery.module.css'
+import LeftArrowIcon from './icons/LeftArrow'
+import RightArrowIcon from './icons/RightArrow'
+import PlusIcon from './icons/Plus'
 
 const Gallery = () => {
-  const { galleryHolder, galleryLeft, eachPic, firstPicHolder, firstPic, secondPicHolder, secondPic, thirdPicHolder, thirdPic, fourthPicHolder, fourthPic, galleryRight } = styles
+  const { galleryHolder, arrows, imgDiv, modalBcg, activeClose, activeImageHolder, picCross, galleryLeft, eachPic, firstPicHolder, firstPic, secondPicHolder, secondPic, thirdPicHolder, thirdPic, fourthPicHolder, fourthPic, galleryRight, overlay, picHolder } = styles
+
+  const [ activePic, setActivePic ] = useState({
+    isActive: false,
+    activeImage: null
+  })
+
+  const handleClick = (e) => {
+    setActivePic(prev => ({
+      isActive: !prev.isActive,
+      activeImage: e.target.id
+    }))
+  }
+
+  const handleNext = operation => {
+    let number = activePic.activeImage
+    if (number == "6" && operation === 1) {
+      number = 1
+    } else if (number == "1" && operation === -1) {
+      number = 6
+    } else {
+      number = parseInt(number) + operation
+    }
+
+    setActivePic(prev => ({
+      ...prev,
+      activeImage: number
+    }))
+  }
+
+  useEffect(() => {
+    const html = document.getElementsByTagName('html')[0]
+    if (activePic.isActive) {
+      html.style.overflow = "hidden"
+    } else {
+      html.style.overflow = "auto"
+    }
+  }, [activePic.isActive])
+
 
   return (
     <div id="Galerija" className={`${galleryHolder} inner-width`}>
+      {
+        activePic.isActive 
+        &&
+        <div className={`${activeImageHolder}`}>
+          <div onClick={handleClick} className={`${modalBcg}`}></div>
+          <span onClick={handleClick} className={`${activeClose}`}>
+            <PlusIcon />
+          </span>
+          <div className={`${imgDiv}`}>
+            <span className={`${arrows}`} onClick={() => handleNext(-1)}>
+              <LeftArrowIcon />
+            </span>
+            <img onClick={() => handleNext(1)} src={`/gallery/${activePic.activeImage}.jpg`} />
+            <span className={`${arrows}`} onClick={() => handleNext(1)}>
+              <RightArrowIcon />
+            </span>
+          </div>
+        </div> 
+      }
       <div className={`${galleryLeft}`}>
-        <div className={`${firstPicHolder}`}>
+        <div className={`${firstPicHolder} ${picHolder}`}>
+          <span id="1" onClick={handleClick} className={`${picCross}`}>
+            <PlusIcon id="1" />
+          </span>
+          <div id="1" onClick={handleClick} className={`${overlay}`}></div>
           <div className={`${firstPic} ${eachPic}`}></div>
         </div>
-        <div className={`${thirdPicHolder}`}>
+        <div className={`${thirdPicHolder} ${picHolder}`}>
+          <span id="4" onClick={handleClick} className={`${picCross}`}>
+            <PlusIcon id="4" />
+          </span>
+          <div id="4" onClick={handleClick} className={`${overlay}`}></div>
           <div className={`${thirdPic} ${eachPic}`}></div>
         </div>
       </div>
       <div className={`${galleryRight}`}>
-        <div className={`${secondPicHolder}`}>
+        <div className={`${secondPicHolder} ${picHolder}`}>
+          <span id="2" onClick={handleClick} className={`${picCross}`}>
+            <PlusIcon id="2" />
+          </span>
+          <div id="2" onClick={handleClick} className={`${overlay}`}></div>
           <div className={`${secondPic} ${eachPic}`}></div>
         </div>
-        <div className={`${fourthPicHolder}`}>
+        <div className={`${fourthPicHolder} ${picHolder}`}>
+          <span id="3" onClick={handleClick} className={`${picCross}`}>
+            <PlusIcon id="3" />
+          </span>
+          <div id="3" onClick={handleClick} className={`${overlay}`}></div>
           <div className={`${fourthPic} ${eachPic}`}></div>
         </div>
       </div>

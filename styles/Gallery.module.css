@@ -17,27 +17,28 @@
   padding: 15px;
 }
 
+.firstPicHolder, .secondPicHolder, .thirdPicHolder, .fourthPicHolder {
+  position: relative;
+  overflow: hidden;
+}
+
 .firstPicHolder {
   height: 780px;
   width: 100%;
-  overflow: hidden;
   margin-bottom: 30px;
 }
 .secondPicHolder {
   height: 545px;
   width: 85%;
-  overflow: hidden;
   margin-bottom: 30px;
 }
 .thirdPicHolder {
   height: 545px;
   width: 85%;
-  overflow: hidden;
 }
 .fourthPicHolder {
   height: 583px;
   width: 100%;
-  overflow: hidden;
 }
 
 .eachPic {
@@ -57,13 +58,132 @@
   background-image: url('/gallery/2.jpg');
 }
 .thirdPic {
-  background-image: url('/gallery/3.jpg');
+  background-image: url('/gallery/4.jpg');
 }
 .fourthPic {
-  background-image: url('/gallery/4.jpg');
+  background-image: url('/gallery/3.jpg');
   background-position: left;
 }
 
-.firstPic:hover, .secondPic:hover, .thirdPic:hover, .fourthPic:hover {
+.overlay:hover ~ div {
   transform: scale(1.1);
+}
+
+.picCross:hover ~ div {
+  transform: scale(1.1);
+}
+
+.picCross:hover ~ .overlay {
+  opacity: 0.5;
+}
+
+.overlay {
+  background-color: black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 2;
+  cursor: pointer;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.overlay:hover {
+  opacity: 0.5;
+}
+
+.picCross {
+  position: absolute;
+  top: 35%;
+  left: calc(50% - 23px);
+  opacity: 0;
+  transition: all ease-in-out 0.4s;
+  cursor: pointer;
+  z-index: 3;
+}
+
+.picCross > svg path {
+  fill: white;
+}
+
+.picHolder:hover > span {
+  transform: rotate(90deg);
+  top: 50%;
+  opacity: 1;
+}
+
+.activeImageHolder {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.imgDiv > img {
+  z-index: 11;
+  cursor: pointer;
+  width: 90%;
+  margin: 0 15px;
+}
+
+.activeClose {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  z-index: 12;
+  cursor: pointer;
+  transition: opacity ease-in-out 0.2s;
+}
+
+.activeClose:hover {
+  opacity: 0.8;
+}
+
+.activeClose > svg {
+  transform: rotate(45deg);
+  height: 30px;
+}
+
+.activeClose > svg path {
+  fill: white;
+}
+
+.modalBcg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(10,10,10,.86)
+}
+
+.imgDiv {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  max-width: 900px;
+}
+
+.arrows {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity ease-in-out 0.2s;
+  height: 100%;
+}
+
+.arrows:hover {
+  opacity: 0.8;
+}
+
+.arrows > svg path {
+  fill: white;
 }

@@ -3,10 +3,10 @@ import styles from '../../styles/EachMenu.module.css'
 
 const EachMenu = props => {
   const { eachDish, dishTitle, dishContainer, dishHolder, dishName, dishDesc, dotted } = styles
-  const { key, title, dishes } = props
+  const { title, dishes } = props
 
   return (
-    <div className={`${eachDish}`} key={key}>
+    <div className={`${eachDish}`} key={1}>
       <h2 className={`${dishTitle} playFair`}>{title}</h2>
       {
         dishes.map(d => (
