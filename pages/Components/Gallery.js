@@ -12,6 +12,8 @@ const Gallery = () => {
     activeImage: null
   })
 
+  const [ height, setHeight ] = useState(0)
+
   const handleClick = (e) => {
     setActivePic(prev => ({
       isActive: !prev.isActive,
@@ -39,10 +41,11 @@ const Gallery = () => {
     const html = document.getElementsByTagName('html')[0]
     if (activePic.isActive) {
       html.style.overflow = "hidden"
+      setHeight(document.getElementsByClassName('activeImg')[0].height)
     } else {
       html.style.overflow = "auto"
     }
-  }, [activePic.isActive])
+  }, [activePic])
 
 
   return (
@@ -55,11 +58,11 @@ const Gallery = () => {
           <span onClick={handleClick} className={`${activeClose}`}>
             <PlusIcon />
           </span>
-          <div className={`${imgDiv}`}>
+          <div style={{height}} className={`${imgDiv}`}>
             <span className={`${arrows}`} onClick={() => handleNext(-1)}>
               <LeftArrowIcon />
             </span>
-            <img onClick={() => handleNext(1)} src={`/gallery/${activePic.activeImage}.jpg`} />
+            <img className="activeImg" onClick={() => handleNext(1)} src={`/gallery/${activePic.activeImage}.jpg`} />
             <span className={`${arrows}`} onClick={() => handleNext(1)}>
               <RightArrowIcon />
             </span>
