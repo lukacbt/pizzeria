@@ -10,9 +10,11 @@ const Layout = props => {
     <span>
       <Navbar />
       <div className={contentHolder}>
-        <div className={`${fixedLeft} ${fixed}`}>
-          <p className={`${paragraphLeft} roboto`}>Cijeli Menu</p>
-        </div>
+        <a href="/comeToMamaPDF.pdf" target="_blank">
+          <div className={`${fixedLeft} ${fixed}`}>
+            <p className={`${paragraphLeft} roboto`}>Cijeli Menu</p>
+          </div>
+        </a>
         <div className={`${fixedRight} ${fixed}`}>
           <p className={`${paragraphRight} roboto`}>Rezerviraj Stol</p>
         </div>
