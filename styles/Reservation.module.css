@@ -1,0 +1,90 @@
+.reservationHolder {
+  display: flex;
+}
+
+.reservationLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 57%;
+  padding: 120px 50px 240px;
+  background-color: #faf5f0;
+}
+
+.reservationRight {
+  width: 43%;
+  padding: 0 15px 0 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.reservationTitle {
+  font-size: 48px;
+  margin-bottom: 20px;
+  line-height: 1.5;
+  letter-spacing: 7.2px;
+  text-transform: uppercase;
+  text-align: left;
+  color: black;
+}
+
+.reservationParagraph {
+  margin: 0 0 50px;
+  line-height: 30px;
+  color: #777777;
+  font-size: 15px;
+  font-weight: 400;
+  text-align: left;
+}
+
+.input {
+  display: block;
+  min-width: 100%;
+  max-width: 100%;
+  width: 100%;
+  height: 38px;
+  border-radius: 0;
+  background-color: #ffffff;
+  border: 0;
+  color: #777777;
+  font-size: 14px;
+  padding: 8px 12px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.textarea {
+  min-height: 150px;
+}
+
+.option {
+  padding: 0;
+}
+
+.date, .time {
+  cursor: pointer;
+}
+
+.reservationButton {
+  background: #000000;
+  cursor: pointer;
+  width: 190px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  line-height: 48px;
+  font-size: 15px;
+  padding: 0 30px;
+  border-radius: 0;
+  letter-spacing: 2px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  outline: none;
+  transition: all 0.4s ease-in-out;
+}
+
+.reservationButton:hover {
+  background: transparent;
+  border: 1px solid #ad9966;
+  color: #ad9966;
+}

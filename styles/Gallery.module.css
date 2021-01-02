@@ -1,19 +1,19 @@
 .galleryHolder {
   display: flex;
-  padding: 240px 0 90px;
+  padding: 225px 0 90px;
 }
 
 .galleryLeft {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 55%;
+  width: 50%;
   padding: 15px;
   margin-top: -360px;
 }
 
 .galleryRight {
-  width: 45%;
+  width: 50%;
   padding: 15px;
 }
 

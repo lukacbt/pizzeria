@@ -5,6 +5,10 @@ import styles from '../../styles/Layout.module.css'
 
 const Layout = props => {
   const { contentHolder, fixedLeft, fixedRight, fixed, paragraphLeft, paragraphRight } = styles
+  
+  const handleReservation = () => {
+    document.getElementById('Rezerviraj').scrollIntoView({ behavior: 'smooth'})
+  }
 
   return (
     <span>
@@ -15,7 +19,7 @@ const Layout = props => {
             <p className={`${paragraphLeft} roboto`}>Cijeli Menu</p>
           </div>
         </a>
-        <div className={`${fixedRight} ${fixed}`}>
+        <div className={`${fixedRight} ${fixed}`} onClick={handleReservation}>
           <p className={`${paragraphRight} roboto`}>Rezerviraj Stol</p>
         </div>
         {props.children}

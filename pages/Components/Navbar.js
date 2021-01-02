@@ -15,10 +15,12 @@ const Navbar = () => {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       setScroll(window.scrollY)
-      if (window.scrollY >= 850 && window.scrollY < 1957) {
+      if (window.scrollY >= 800 && window.scrollY < 1760) {
         setActiveNav('Menu')
-      } else if (window.scrollY >= 1957 && window.scrollY < 2500) {
+      } else if (window.scrollY >= 1760 && window.scrollY < 3300) {
         setActiveNav('Galerija')
+      } else if (window.scrollY >= 3300 && window.scrollY < 5000) {
+        setActiveNav('Rezerviraj')
       } else {
         setActiveNav('Početna')
       }
