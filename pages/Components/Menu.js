@@ -11,7 +11,7 @@ const Menu = () => {
       <div className={`${menuLeft}`}>
         <div className={`${menuLeftHolder}`}>
           <h1 className={`${menuTitle} playFair`}>Come to Mama - Mama Knows Best</h1>
-          <p className={`${menuParagraph} roboto`}>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <p className={`${menuParagraph} roboto`}>Come to Mama novootvoreno mjesto za vrhunsku pizzu na zagrebačkim Vrbanima koje već na prvi pogled osvaja divnim cosy interijerom koji će baš svako druženje dodatno upotpuniti i navesti goste da se iznova vraćaju. <br/>  Ovo divno mjesto u svojoj ponudi nudi izbor između deset pizza koje će, sigurni smo, zadovoljiti baš svačiji ukus. </p>
           <a className={`${menuButton} roboto`} href="/comeToMamaPDF.pdf">Cijeli menu</a>
         </div>
       </div>

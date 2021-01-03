@@ -23,8 +23,8 @@ const Layout = props => {
           <p className={`${paragraphRight} roboto`}>Rezerviraj Stol</p>
         </div>
         {props.children}
-        <Footer />
       </div>
+      <Footer />
     </span>
   )
 }
