@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../../styles/Contact.module.css'
 
 const Contact = () => {
-  const { contactHolder, iframe, contactLeft, contactTitle, contactParagraph, contactRight } = styles
+  const { contactHolder, iframe, contactLeft, contactRight } = styles
 
   return (
     <div id="Kontakt" className={`${contactHolder} inner-width`}>
@@ -15,15 +15,15 @@ const Contact = () => {
         />
       </div>
       <div className={`${contactRight}`}>
-        <h1 className={`${contactTitle} playFair`}>Kontakt</h1>
-        <p className={`${contactParagraph} roboto`}><strong>Adresa:</strong> Kuzminečka ulica 10, Vrbani III</p>
-        <p className={`${contactParagraph} roboto`}><strong>Kontakt broj:</strong> 01/202 9659</p>
-        <p className={`${contactParagraph} roboto`}><strong>Radno vrijeme:</strong> <br/> Ponedjeljak - Nedjelja <br/> 07 - 00h </p>
-        <p className={`${contactParagraph} roboto`}><strong>Naziv tvrtke:</strong> Mama Vrbani d.o.o.</p>
-        <p className={`${contactParagraph} roboto`}><strong>Adresa tvrtke:</strong> Aleja Matije Ljubeka 25, 10 000 Zagreb</p>
-        <p className={`${contactParagraph} roboto`}><strong>OIB:</strong> 40496930269</p>
-        <p className={`${contactParagraph} roboto`}><strong>Broj računa (IBAN):</strong> HR6023600001102836328, Zagrebačka banka</p>
-        <p className={`${contactParagraph} roboto`}>Upite za grupe, poslovne ili obiteljske proslave slati na na <strong><a href="mailto:info@cometomama.hr">info@cometomama.hr</a></strong> ili putem kontakt forme. <br/> Za marketing upite pišite na <strong><a href="mailto:marketing@cometomama.hr">marketing@cometomama.hr</a></strong> </p>
+        <h1 className={`title playFair`}>Kontakt</h1>
+        <p className={`paragraph roboto`}><strong>Adresa:</strong> Kuzminečka ulica 10, Vrbani III</p>
+        <p className={`paragraph roboto`}><strong>Kontakt broj:</strong> 01/202 9659</p>
+        <p className={`paragraph roboto`}><strong>Radno vrijeme:</strong> <br/> Ponedjeljak - Nedjelja <br/> 07 - 00h </p>
+        <p className={`paragraph roboto`}><strong>Naziv tvrtke:</strong> Mama Vrbani d.o.o.</p>
+        <p className={`paragraph roboto`}><strong>Adresa tvrtke:</strong> Aleja Matije Ljubeka 25, 10 000 Zagreb</p>
+        <p className={`paragraph roboto`}><strong>OIB:</strong> 40496930269</p>
+        <p className={`paragraph roboto`}><strong>Broj računa (IBAN):</strong> HR6023600001102836328, Zagrebačka banka</p>
+        <p className={`paragraph roboto`}>Upite za grupe, poslovne ili obiteljske proslave slati na na <strong><a href="mailto:info@cometomama.hr">info@cometomama.hr</a></strong> ili putem kontakt forme. <br/> Za marketing upite pišite na <strong><a href="mailto:marketing@cometomama.hr">marketing@cometomama.hr</a></strong> </p>
       </div>
     </div>
   )

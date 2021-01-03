@@ -18,26 +18,6 @@
   padding: 0 15px;
 }
 
-.aboutTitle {
-  font-size: 48px;
-  margin-bottom: 20px;
-  line-height: 1.5;
-  letter-spacing: 7.2px;
-  text-transform: uppercase;
-  text-align: left;
-  color: black;
-  font-weight: normal;
-}
-
-.aboutParagraph {
-  margin: 0 0 10px;
-  line-height: 30px;
-  color: #777777;
-  font-size: 15px;
-  font-weight: 400;
-  text-align: left;
-}
-
 .image {
   border: none;
   outline: none;

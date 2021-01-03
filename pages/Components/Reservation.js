@@ -26,8 +26,8 @@ const Reservation = () => {
         </div>
       </div>
       <div className={`${reservationRight}`}>
-        <h1 className={`${reservationTitle} playFair`}>Rezerviraj stol</h1>
-        <p className={`${reservationParagraph} roboto`}>Ljubitelji pizze Romana, jednostavne, a tako bogate okusom, s najboljim mogućim sastojcima, te tankom, hrskavom koricom došli su na svoje. <br/> Come to Mama sažima ideju ugođaja doma, šarenih detalja i razigranosti koji su uz ukusnu i slasnu pizzu nepogriješiva kombinacija.</p>
+        <h1 className={`title playFair`}>Rezerviraj stol</h1>
+        <p className={`paragraph roboto`}>Ljubitelji pizze Romana, jednostavne, a tako bogate okusom, s najboljim mogućim sastojcima, te tankom, hrskavom koricom došli su na svoje. <br/> Come to Mama sažima ideju ugođaja doma, šarenih detalja i razigranosti koji su uz ukusnu i slasnu pizzu nepogriješiva kombinacija.</p>
       </div>
     </div>
   )
