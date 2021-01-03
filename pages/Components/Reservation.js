@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../../styles/Reservation.module.css'
 
 const Reservation = () => {
-  const { reservationHolder, reservationLeftHolder, date, time, option, reservationButton, input, textarea, reservationLeft, reservationRight, reservationTitle, reservationParagraph } = styles
+  const { reservationHolder, reservationLeftHolder, date, time, option, reservationButton, input, textarea, reservationLeft, reservationRight } = styles
   const timeOfDay = ["Vrijeme rezervacije *", "16:00 h", "16:30 h", "17:00 h", "17:30 h", "18:00 h", "18:30 h", "19:00 h", "19:30 h", "20:00 h", "20:30 h", "21:00 h"]
   
   return (

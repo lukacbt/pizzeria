@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../../styles/Contact.module.css'
 
 const Contact = () => {
-  const { contactHolder, iframe, contactLeft, contactRight } = styles
+  const { contactHolder, iframe, contactLeft, contactRight, aTag } = styles
 
   return (
     <div id="Kontakt" className={`${contactHolder} inner-width`}>
@@ -23,7 +23,7 @@ const Contact = () => {
         <p className={`paragraph roboto`}><strong>Adresa tvrtke:</strong> Aleja Matije Ljubeka 25, 10 000 Zagreb</p>
         <p className={`paragraph roboto`}><strong>OIB:</strong> 40496930269</p>
         <p className={`paragraph roboto`}><strong>Broj računa (IBAN):</strong> HR6023600001102836328, Zagrebačka banka</p>
-        <p className={`paragraph roboto`}>Upite za grupe, poslovne ili obiteljske proslave slati na na <strong><a href="mailto:info@cometomama.hr">info@cometomama.hr</a></strong> ili putem kontakt forme. <br/> Za marketing upite pišite na <strong><a href="mailto:marketing@cometomama.hr">marketing@cometomama.hr</a></strong> </p>
+        <p className={`paragraph roboto`}>Upite za grupe, poslovne ili obiteljske proslave slati na na <strong><a className={`${aTag}`} href="mailto:info@cometomama.hr">info@cometomama.hr</a></strong> ili putem kontakt forme. <br/> Za marketing upite pišite na <strong><a className={`${aTag}`} href="mailto:marketing@cometomama.hr">marketing@cometomama.hr</a></strong> </p>
       </div>
     </div>
   )

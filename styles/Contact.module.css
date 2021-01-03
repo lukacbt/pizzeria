@@ -19,6 +19,10 @@
   padding: 0 15px 0 80px;
 }
 
+.aTag:hover {
+  text-decoration: underline;
+}
+
 .iframe {
   border: none;
   outline: none;
