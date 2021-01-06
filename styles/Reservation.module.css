@@ -76,3 +76,19 @@
   border: 1px solid #ad9966;
   color: #ad9966;
 }
+
+@media screen and (max-width: 1024px) {
+  .reservationHolder {
+    padding-top: 65px;
+    margin-bottom: 0;
+  }
+  .reservationLeft {
+    padding: 30px 20px;
+    background-color: #faf5f0;
+  }
+  .reservationRight {
+    width: 43%;
+    margin-top: -120px;
+    padding: 0 15px;
+  }
+}

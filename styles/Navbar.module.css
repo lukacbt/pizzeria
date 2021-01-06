@@ -26,6 +26,11 @@
   justify-content: center;
 }
 
+.navImg {
+  width: auto;
+  height: 90px;
+}
+
 .eachNav {
   font-size: 13px;
   text-transform: uppercase;
@@ -45,4 +50,16 @@
 
 .eachNav:not(:last-child) {
   margin-right: 32px;
+}
+
+@media screen and (max-width: 1024px) {
+  .navbarHolder {
+    height: 75px;
+  }
+  .eachNav:not(:last-child) {
+    margin-right: 15px;
+  }
+  .navImg {
+    height: 75px;
+  }
 }

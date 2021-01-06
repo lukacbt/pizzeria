@@ -66,3 +66,15 @@
   font-weight: 400;
   margin: 0;
 }
+
+@media screen and (max-width: 1024px) {
+  .dishTitle {
+    margin: 0 0 40px;
+  }
+  .eachDish:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .dishContainer:not(:last-child) {
+    margin-bottom: 25px;
+  }
+}

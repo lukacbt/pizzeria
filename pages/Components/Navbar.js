@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import styles from '../../styles/Navbar.module.css'
 
 const Navbar = () => {
-  const { navbarHolder, navbarContainer, navbarShadow, eachNavHolder, eachNav, active } = styles
+  const { navbarHolder, navbarContainer, navImg, navbarShadow, eachNavHolder, eachNav, active } = styles
   const navLeft = ['Početna', 'Menu', 'Galerija']
   const navRight = ['Rezerviraj', 'Onama', 'Kontakt']
   const [ activeNav, setActiveNav ] = useState('Početna')
@@ -17,18 +17,36 @@ const Navbar = () => {
   useEffect(() => {
     window.addEventListener('scroll', () => {
       setScroll(window.scrollY)
-      if (window.scrollY >= 800 && window.scrollY < 1760) {
-        setActiveNav('Menu')
-      } else if (window.scrollY >= 1760 && window.scrollY < 3300) {
-        setActiveNav('Galerija')
-      } else if (window.scrollY >= 3300 && window.scrollY < 4100) {
-        setActiveNav('Rezerviraj')
-      } else if (window.scrollY >= 4100 && window.scrollY < 4960) {
-        setActiveNav('Onama')
-      } else if (window.scrollY >= 4960) {
-        setActiveNav('Kontakt')
-      } else {
-        setActiveNav('Početna')
+      if (window.innerWidth > 1024) {
+        if (window.scrollY >= 800 && window.scrollY < 1760) {
+          setActiveNav('Menu')
+        } else if (window.scrollY >= 1760 && window.scrollY < 3300) {
+          setActiveNav('Galerija')
+        } else if (window.scrollY >= 3300 && window.scrollY < 4100) {
+          setActiveNav('Rezerviraj')
+        } else if (window.scrollY >= 4100 && window.scrollY < 4960) {
+          setActiveNav('Onama')
+        } else if (window.scrollY >= 4960) {
+          setActiveNav('Kontakt')
+        } else {
+          setActiveNav('Početna')
+        }
+      }
+
+      if (window.innerWidth > 768 && window.innerWidth < 1025) {
+        if (window.scrollY >= 760 && window.scrollY < 1600) {
+          setActiveNav('Menu')
+        } else if (window.scrollY >= 1600 && window.scrollY < 2860) {
+          setActiveNav('Galerija')
+        } else if (window.scrollY >= 2860 && window.scrollY < 3565) {
+          setActiveNav('Rezerviraj')
+        } else if (window.scrollY >= 3565 && window.scrollY < 4250) {
+          setActiveNav('Onama')
+        } else if (window.scrollY >= 4250) {
+          setActiveNav('Kontakt')
+        } else {
+          setActiveNav('Početna')
+        }
       }
     })
   }, [])
@@ -50,7 +68,7 @@ const Navbar = () => {
             ))
           }
         </div>
-        <img src="/navbar/logo.png" width="auto" height="90px" alt="Come To Mama" />
+        <img src="/navbar/logo.png" className={`${navImg}`} alt="Come To Mama" />
         <div className={`${eachNavHolder}`}>
           {
             navRight.map(nav => (

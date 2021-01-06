@@ -186,3 +186,32 @@
 .arrows > svg path {
   fill: white;
 }
+
+@media screen and (max-width: 1024px) {
+  .galleryHolder {
+    padding: 65px 0 0;
+  }
+  .galleryLeft {
+    margin-top: 0;
+  }
+  .firstPicHolder {
+    height: 600px;
+  }
+  .secondPicHolder {
+    width: 100%;
+  }
+  .thirdPicHolder {
+    width: 100%;
+  }
+  .fourthPicHolder {
+    height: 600px;
+  }
+  .galleryLeft {
+    padding: 15px 15px 0;
+  }
+  
+  .galleryRight {
+    padding: 15px 15px 0;
+  }
+}
+
