@@ -215,3 +215,14 @@
   }
 }
 
+@media screen and (max-width: 768px) {
+  .galleryHolder {
+    display: block;
+  }
+  .firstPicHolder, .secondPicHolder, .thirdPicHolder, .fourthPicHolder {
+    height: 500px;
+  }
+  .galleryLeft, .galleryRight {
+    width: 100%;
+  }
+}

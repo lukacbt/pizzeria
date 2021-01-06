@@ -87,8 +87,25 @@
     background-color: #faf5f0;
   }
   .reservationRight {
-    width: 43%;
     margin-top: -120px;
+    padding: 0 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .reservationHolder {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-top: 35px;
+  }
+  .reservationLeftHolder, .reservationRight {
+    width: 100%;
+  }
+  .reservationLeftHolder {
+    padding-top: 60px;
+  }
+  .reservationRight {
+    margin-top: 0;
     padding: 0 15px;
   }
 }

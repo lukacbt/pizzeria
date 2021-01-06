@@ -41,3 +41,19 @@
     height: 700px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .contactHolder {
+    display: block;
+    padding: 60px 0;
+  }
+  .contactLeft, .contactRight {
+    width: 100%;
+  }
+  .iframe {
+    height: 550px;
+  }
+  .contactRight {
+    padding: 35px 15px 0;
+  }
+}

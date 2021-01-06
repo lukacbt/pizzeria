@@ -34,15 +34,15 @@ const Navbar = () => {
       }
 
       if (window.innerWidth > 768 && window.innerWidth < 1025) {
-        if (window.scrollY >= 760 && window.scrollY < 1600) {
+        if (window.scrollY >= 510 && window.scrollY < 1350) {
           setActiveNav('Menu')
-        } else if (window.scrollY >= 1600 && window.scrollY < 2860) {
+        } else if (window.scrollY >= 1350 && window.scrollY < 2610) {
           setActiveNav('Galerija')
-        } else if (window.scrollY >= 2860 && window.scrollY < 3565) {
+        } else if (window.scrollY >= 2610 && window.scrollY < 3315) {
           setActiveNav('Rezerviraj')
-        } else if (window.scrollY >= 3565 && window.scrollY < 4250) {
+        } else if (window.scrollY >= 3315 && window.scrollY < 4000) {
           setActiveNav('Onama')
-        } else if (window.scrollY >= 4250) {
+        } else if (window.scrollY >= 4000) {
           setActiveNav('Kontakt')
         } else {
           setActiveNav('Početna')

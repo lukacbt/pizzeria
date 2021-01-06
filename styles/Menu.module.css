@@ -57,3 +57,23 @@
     padding: 80px 0;
   }
 }
+
+@media screen and (max-width: 1024px) {
+  .menuHolder {
+    display: block;
+    padding-top: 55px;
+  }
+  .menuP {
+    margin-bottom: 30px;
+  }
+  .menuLeft {
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  .menuRight {
+    width: 100%;
+  }
+  .menuRightHolder {
+    padding: 60px 0;
+  }
+}

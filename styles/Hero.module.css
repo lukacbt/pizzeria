@@ -49,7 +49,26 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .heroHolder {
+    height: 500px;
+  }
   .pizzeriaName {
     font-size: 60px;
+  }
+  .top {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .heroHolder {
+    height: calc(100vh - 70px);
+  }
+  .pizzeriaName {
+    font-size: 40px;
+    text-align: center;
+  }
+  .top {
+    display: none;
   }
 }
