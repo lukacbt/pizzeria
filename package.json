@@ -1,5 +1,6 @@
 {
   "name": "pizza",
+  "homepage": "http://lukacbt.github.io/pizzeria",
   "version": "0.1.0",
   "private": true,
   "scripts": {
