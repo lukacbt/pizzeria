@@ -2,7 +2,7 @@ import React from 'react'
 import styles from '../../styles/Reservation.module.css'
 
 const Reservation = () => {
-  const { reservationHolder, reservationLeftHolder, date, time, option, reservationButton, input, textarea, reservationLeft, reservationRight } = styles
+  const { reservationHolder, resTitle, reservationLeftHolder, date, time, option, reservationButton, input, textarea, reservationLeft, reservationRight } = styles
   const timeOfDay = ["Vrijeme rezervacije *", "16:00 h", "16:30 h", "17:00 h", "17:30 h", "18:00 h", "18:30 h", "19:00 h", "19:30 h", "20:00 h", "20:30 h", "21:00 h"]
   
   return (
@@ -26,7 +26,7 @@ const Reservation = () => {
         </div>
       </div>
       <div className={`${reservationRight}`}>
-        <h1 className={`title playFair`}>Rezerviraj stol</h1>
+        <h1 className={`${resTitle} title playFair`}>Rezerviraj stol</h1>
         <p className={`paragraph roboto`}>Ljubitelji pizze Romana, jednostavne, a tako bogate okusom, s najboljim mogućim sastojcima, te tankom, hrskavom koricom došli su na svoje. <br/> Come to Mama sažima ideju ugođaja doma, šarenih detalja i razigranosti koji su uz ukusnu i slasnu pizzu nepogriješiva kombinacija.</p>
       </div>
     </div>

@@ -96,10 +96,13 @@
   .reservationHolder {
     display: flex;
     flex-direction: column-reverse;
-    padding-top: 35px;
+    padding-top: 80px;
   }
   .reservationLeftHolder, .reservationRight {
     width: 100%;
+  }
+  .resTitle {
+    margin-top: 0;
   }
   .reservationLeftHolder {
     padding-top: 60px;

@@ -41,7 +41,7 @@
 @media screen and (max-width: 768px) {
   .aboutHolder {
     display: block;
-    padding-top: 60px;
+    padding-top: 80px;
   }
   .aboutLeft, .aboutRight {
     width: 100%;
