@@ -18,6 +18,9 @@ const Navbar = () => {
     menu?.scrollIntoView({ behavior: 'smooth'})
     window.innerWidth < 768 && setBurger(prev => !prev)
   }
+  const handleLogo = () => {
+    document.getElementById('Početna')?.scrollIntoView({ behavior: 'smooth'})
+  }
 
   useEffect(() => {
     window.addEventListener('scroll', () => {
@@ -90,7 +93,7 @@ const Navbar = () => {
               ))
             }
           </div>
-          <img src="/navbar/logo.png" className={`${navImg}`} alt="Come To Mama" />
+          <img onClick={handleLogo} src="/navbar/logo.png" className={`${navImg}`} alt="Come To Mama" />
           <div className={`${eachNavHolder}`}>
             {
               navRight.map(nav => (
@@ -120,7 +123,7 @@ const Navbar = () => {
       </div>
 
       <div tabIndex="0" onBlur={() => setBurger(true)} className={`${navbarMobileHolder}`}>
-        <img src="/navbar/logo.png" className={`${navImg}`} alt="Come To Mama" />
+        <img onClick={handleLogo} src="/navbar/logo.png" className={`${navImg}`} alt="Come To Mama" />
         <span onClick={() => setBurger(prev => !prev)} className={`${burgerHolder}`} >
           {
             isBurger

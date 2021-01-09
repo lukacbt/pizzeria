@@ -27,6 +27,7 @@
 }
 
 .navImg {
+  cursor: pointer;
   width: auto;
   height: 90px;
 }
