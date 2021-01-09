@@ -7,17 +7,23 @@
   position: fixed;
   width: 92px;
   height: 180px;
-  top: 50%;
+  top: 40%;
   z-index: 10;
   cursor: pointer;
 }
 
 .fixedLeft:hover .paragraphLeft {
   color: #ad9966;
+  transform: rotate(0deg);
+  transform: translate(-48px, 82.5px);
+  letter-spacing: 0.4px;
 }
 
 .fixedRight:hover .paragraphRight {
   color: black;
+  transform: rotate(0deg);
+  transform: translate(-42px, 82.5px);
+  letter-spacing: 0.4px;
 }
 
 .fixedLeft {
@@ -31,6 +37,7 @@
 }
 
 .paragraphLeft {
+  letter-spacing: 2px;
   transform: rotate(90deg) translate(90px, 64px);
   margin: 0;
   width: 180px;
@@ -39,10 +46,11 @@
   text-transform: uppercase;
   font-size: 13px;
   cursor: pointer;
-  transition: color ease-in-out 0.3s;
+  transition: all ease-in-out 0.4s;
 }
 
 .paragraphRight {
+  letter-spacing: 2px;
   transform: rotate(-90deg) translate(-80px, -26px);
   margin: 0;
   width: 180px;
@@ -51,7 +59,7 @@
   text-transform: uppercase;
   font-size: 13px;
   cursor: pointer;
-  transition: color ease-in-out 0.4s;
+  transition: all ease-in-out 0.5s;
 }
 
 @media screen and (max-width: 1349px) {

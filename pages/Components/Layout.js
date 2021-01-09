@@ -20,7 +20,7 @@ const Layout = props => {
           </div>
         </a>
         <div className={`${fixedRight} ${fixed}`} onClick={handleReservation}>
-          <p className={`${paragraphRight} roboto`}>Rezerviraj Stol</p>
+          <p className={`${paragraphRight} roboto`}>Rezerviraj</p>
         </div>
         {props.children}
       </div>

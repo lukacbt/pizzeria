@@ -15,7 +15,7 @@ const Contact = () => {
       <div className={`${contactRight}`}>
         <h1 className={`title playFair`}>Kontakt</h1>
         <p className={`paragraph roboto`}><strong>Adresa:</strong> Kuzminečka ulica 10, Vrbani III</p>
-        <p className={`paragraph roboto`}><strong>Kontakt broj:</strong> 01/202 9659</p>
+        <p className={`paragraph roboto`}><strong>Kontakt broj:</strong> <a className={`${aTag}`} href="tel:012029659">01/202 9659</a></p>
         <p className={`paragraph roboto`}><strong>Radno vrijeme:</strong> <br/> Ponedjeljak - Nedjelja <br/> 07 - 00h </p>
         <p className={`paragraph roboto`}><strong>Naziv tvrtke:</strong> Mama Vrbani d.o.o.</p>
         <p className={`paragraph roboto`}><strong>Adresa tvrtke:</strong> Aleja Matije Ljubeka 25, 10 000 Zagreb</p>
