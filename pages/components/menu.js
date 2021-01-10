@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from '../../styles/Menu.module.css'
 import EachMenu from './eachmenu'
-import { dishes } from './dishes'
+import dishes from './dishes'
 
 const Menu = () => {
   const { menuHolder, menuLeft, menuP, menuButton, menuLeftHolder, menuRight, menuRightHolder } = styles
