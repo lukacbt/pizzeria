@@ -1,28 +1,66 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from '../../styles/Reservation.module.css'
+import emailjs from 'emailjs-com'
 
 const Reservation = () => {
-  const { reservationHolder, resTitle, reservationLeftHolder, date, time, option, reservationButton, input, textarea, reservationLeft, reservationRight } = styles
+  const { reservationHolder, form, bottomFormHolder, succ, resTitle, disabled, error, reservationLeftHolder, date, time, option, reservationButton, input, textarea, reservationLeft, reservationRight } = styles
   const timeOfDay = ["Vrijeme rezervacije *", "16:00 h", "16:30 h", "17:00 h", "17:30 h", "18:00 h", "18:30 h", "19:00 h", "19:30 h", "20:00 h", "20:30 h", "21:00 h"]
+  const [ number, setNumber ] = useState(null)
+  const [ success, setSuccess ] = useState(false)
+
+  const handleChange = (e) => {
+    setNumber(e.target.value)
+  }
+
+  const sendEmail = (e) => {
+    e.preventDefault();
   
+    emailjs.sendForm('service_1jy8twx', 'template_ya74n8y', e.target, 'user_CWlJywwGZIbkQQPKVEKtb')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
+    e.target.reset()
+    setNumber(null)
+    setSuccess(true)
+    setTimeout(() => {
+      setSuccess(false)
+    }, 3000)
+  }
+
   return (
     <div id="Rezerviraj" className={`${reservationHolder} inner-width`}>
       <div className={`${reservationLeftHolder}`}>
         <div className={`${reservationLeft}`}>
-          <input className={`${input} roboto`} placeholder="Vaše ime i prezime *" type="text" />
-          <input className={`${input} ${time} roboto`} placeholder="Datum rezervacije *" type="date" />
-          <select className={`${input} ${date} roboto`}>
+          <form className={`${form}`} onSubmit={sendEmail}>
+            <input className={`${input} roboto`} placeholder="Vaše ime i prezime" type="text" name="ime" />
+            <input className={`${input} ${time} roboto`} placeholder="Datum rezervacije" type="date" name="datum" />
+            <select className={`${input} ${date} roboto`} name="vrijeme">
+              {
+                timeOfDay.map(t => (
+                  <option className={`${option}`} key={t}>{t}</option>
+                ))
+              }
+            </select>
+            <input className={`${input} roboto`} placeholder="Broj osoba" type="number" name="brojOsoba" />
+            <input onChange={handleChange} className={`${input} roboto`} placeholder="Vaš kontakt broj *" type="number" name="broj" />
             {
-              timeOfDay.map(t => (
-                <option className={`${option}`} key={t}>{t}</option>
-              ))
+              !number 
+              &&
+              <span className={`${error} roboto`}>Obavezno polje</span>
             }
-          </select>
-          <input className={`${input} roboto`} placeholder="Broj osoba *" type="number" />
-          <input className={`${input} roboto`} placeholder="Vaš kontakt broj *" type="number" />
-          <input className={`${input} roboto`} placeholder="Vaša e-mail adresa" type="email" />
-          <textarea className={`${input} ${textarea} roboto`} placeholder="Dodatna poruka ..." />
-          <button className={`${reservationButton} roboto`}>Pošalji upit</button>
+            <input className={`${input} roboto`} placeholder="Vaša e-mail adresa" type="email" name="email" />
+            <textarea className={`${input} ${textarea} roboto`} placeholder="Dodatna poruka ..." name="poruka" />
+            <div className={`${bottomFormHolder}`}>
+              <button disabled={!number} className={`${reservationButton} ${!number && disabled} roboto`}>Pošalji upit</button>
+              {
+                success
+                &&
+                <span className={`${succ} roboto`}>Rezervacija uspješno poslana, kontaktirat ćemo Vas uskoro!</span>
+              }
+            </div>
+          </form>
         </div>
       </div>
       <div className={`${reservationRight}`}>

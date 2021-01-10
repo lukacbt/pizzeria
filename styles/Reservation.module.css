@@ -26,6 +26,10 @@
   justify-content: center;
 }
 
+.form {
+  width: 100%;
+}
+
 .input {
   display: block;
   min-width: 100%;
@@ -65,7 +69,6 @@
   padding: 0 30px;
   border-radius: 0;
   letter-spacing: 2px;
-  margin-top: 10px;
   text-transform: uppercase;
   outline: none;
   transition: all 0.4s ease-in-out;
@@ -75,6 +78,37 @@
   background: transparent;
   border: 1px solid #ad9966;
   color: #ad9966;
+}
+.reservationButton.disabled {
+  cursor: default;
+  opacity: 0.6;
+}
+.reservationButton.disabled:hover {
+  background: #000000;
+  cursor: default;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+}
+.bottomFormHolder {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 30px;
+}
+.succ {
+  color: #06553f;
+  font-size: 12px;
+  font-weight: bold;
+  width: calc(100% - 190px);
+  padding-left: 12px;
+}
+.error {
+  display: block;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  margin: -15px 0 18px;
+  width: 100%;
+  padding-left: 12px;
 }
 
 @media screen and (max-width: 1024px) {
