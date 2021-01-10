@@ -9,18 +9,20 @@ const EachMenu = props => {
     <div className={`${eachDish}`} key={1}>
       <h2 className={`${dishTitle} playFair`}>{title}</h2>
       {
-        dishess.map(d => (
-          <div className={`${dishContainer}`} key={d.dish}>
-            <div className={`${dishHolder}`}>
-              <span className={`${dishName} roboto`}>{d.dish}</span>
-              <span className={`${dotted}`}></span>
-              <span className={`${dishName} roboto`}>{d.price}</span>
+        dishess.map(d => {
+          return (
+            <div className={`${dishContainer}`} key={d.dish}>
+              <div className={`${dishHolder}`}>
+                <span className={`${dishName} roboto`}>{d.dish}</span>
+                <span className={`${dotted}`}></span>
+                <span className={`${dishName} roboto`}>{d.price}</span>
+              </div>
+              {
+                d.description && <p className={`${dishDesc} roboto`}>({d.description})</p>
+              }   
             </div>
-            {
-              d.description && <p className={`${dishDesc} roboto`}>({d.description})</p>
-            }   
-          </div>
-        ))
+          )
+        })
       }
     </div>
   )
