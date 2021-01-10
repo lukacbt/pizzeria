@@ -1,4 +1,4 @@
-export const dishes = [
+const dishes = [
   {
     title: 'Pizze',
     eachDish: [
@@ -45,3 +45,5 @@ export const dishes = [
     ]
   }
 ]
+
+export default dishes
