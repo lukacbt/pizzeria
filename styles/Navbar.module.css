@@ -2,6 +2,7 @@
   height: 100px;
   width: 100%;
   position: sticky;
+  transform: translate3d(0,0,0);
   top: 0;
   z-index: 9;
   background-color: white;
