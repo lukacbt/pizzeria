@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from './Navbar'
-import Footer from './Footer'
+import Navbar from './navbar.js'
+import Footer from './footer.js'
 import styles from '../../styles/Layout.module.css'
 
 const layout = props => {

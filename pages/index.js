@@ -1,10 +1,10 @@
 import Layout from './components/layout.js'
-import Hero from './components/Hero'
-import Menu from './components/Menu'
-import Gallery from './components/Gallery'
-import Reservation from './components/Reservation'
-import Contact from './components/Contact'
-import About from './components/About'
+import Hero from './components/hero.js'
+import Menu from './components/menu.js'
+import Gallery from './components/gallery.js'
+import Reservation from './components/reservation.js'
+import Contact from './components/contact.js'
+import About from './components/about.js'
 
 const Home = () =>  {
   return (
