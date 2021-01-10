@@ -1,9 +1,9 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import styles from '../../styles/Layout.module.css'
+import styles from '../../styles/layout.module.css'
 
-const Layout = props => {
+const layout = props => {
   const { contentHolder, fixedLeft, fixedRight, fixed, paragraphLeft, paragraphRight } = styles
   
   const handleReservation = () => {
@@ -29,4 +29,4 @@ const Layout = props => {
   )
 }
 
-export default Layout
+export default layout

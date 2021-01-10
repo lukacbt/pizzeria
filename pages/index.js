@@ -1,4 +1,4 @@
-import Layout from './components/Layout'
+import Layout from './components/layout'
 import Hero from './components/Hero'
 import Menu from './components/Menu'
 import Gallery from './components/Gallery'
