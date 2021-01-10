@@ -1,11 +1,57 @@
 import React from 'react'
 import styles from '../../styles/Menu.module.css'
 import EachMenu from './eachmenu'
-import dishes from './dishes'
 
 const Menu = () => {
   const { menuHolder, menuLeft, menuP, menuButton, menuLeftHolder, menuRight, menuRightHolder } = styles
-  
+  const dishes = [
+    {
+      title: 'Pizze',
+      eachDish: [
+        {
+          dish: 'Mama Pikante',
+          price: '62 HRK',
+          description: 'Umak od rajčice, maslinovo ulje, mozzarella, šunka, češnjak, panceta, luk, ljuta papričica, svježi bosiljak'
+        },
+        {
+          dish: 'Mama Prosciutto',
+          price: '64 HRK',
+          description: 'Umak od rajčice, dvije vrste mozzarelle, grana padano, maslinovo ulje, pršut, cherry rajčice, rukola, svježi bosiljak'
+        }
+      ]
+    },
+    {
+      title: 'Salate',
+      eachDish: [
+        {
+          dish: 'Burata',
+          price: '55 HRK',
+          description: 'Burata, rukola, cherry rajčice, svježi bosiljak, grisini'
+        },
+        {
+          dish: 'Caprese',
+          price: '45 HRK',
+          description: 'Rajčice, mozzarella, maslinovo ulje, grisini'
+        }
+      ]
+    },
+    {
+      title: 'Le Kolač',
+      eachDish: [
+        {
+          dish: 'Pita od Jabuka',
+          price: '28 HRK',
+          description: ''
+        },
+        {
+          dish: 'Yuzu Cheesecake',
+          price: '28 HRK',
+          description: ''
+        }
+      ]
+    }
+  ]
+
   return (
     <div id="Menu" className={`${menuHolder} inner-width`}>
       <div className={`${menuLeft}`}>
