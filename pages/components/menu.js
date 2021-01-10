@@ -68,7 +68,7 @@ const Menu = () => {
               <EachMenu
                 key={dish.title}
                 title={dish.title}
-                dishes={dish.eachDish}
+                dishess={dish.eachDish}
               />
             ))
           }

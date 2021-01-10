@@ -3,13 +3,13 @@ import styles from '../../styles/EachMenu.module.css'
 
 const EachMenu = props => {
   const { eachDish, dishTitle, dishContainer, dishHolder, dishName, dishDesc, dotted } = styles
-  const { title, dishes } = props
+  const { title, dishess } = props
 
   return (
     <div className={`${eachDish}`} key={1}>
       <h2 className={`${dishTitle} playFair`}>{title}</h2>
       {
-        dishes.map(d => (
+        dishess.map(d => (
           <div className={`${dishContainer}`} key={d.dish}>
             <div className={`${dishHolder}`}>
               <span className={`${dishName} roboto`}>{d.dish}</span>
