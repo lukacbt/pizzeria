@@ -1,7 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Footer from './Footer'
-import styles from '../../styles/layout.module.css'
+import styles from '../../styles/Layout.module.css'
 
 const layout = props => {
   const { contentHolder, fixedLeft, fixedRight, fixed, paragraphLeft, paragraphRight } = styles
