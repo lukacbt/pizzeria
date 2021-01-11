@@ -3,7 +3,7 @@ import styles from '../../styles/Menu.module.css'
 import EachMenu from './eachmenu'
 
 const Menu = () => {
-  const { menuHolder, menuLeft, menuP, menuButton, menuLeftHolder, menuRight, menuRightHolder } = styles
+  const { menuHolder, dishTitle, menuLeft, menuP, menuButton, menuLeftHolder, menuRight, menuRightHolder } = styles
   const dishes = [
     {
       title: 'Pizze',
@@ -63,6 +63,7 @@ const Menu = () => {
       </div>
       <div className={`${menuRight}`}>
         <div className={`${menuRightHolder}`}>
+        <h1 className={`${dishTitle} playFair`}>Preporuka Chefa Kuhinje</h1>
           { dishes.length > 0 &&
             dishes.map(dish => (
               <EachMenu

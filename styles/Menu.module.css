@@ -9,7 +9,7 @@
 }
 
 .menuLeftHolder {
-  padding: 0 30px 30px 15px;
+  padding: 0 30px 110px 15px;
 }
 
 .menuP {
@@ -51,6 +51,17 @@
   flex-direction: column;
   align-items: center;
 }
+
+.dishTitle {
+  position: relative;
+  font-size: 24px;
+  margin: 0 0 50px;
+  text-transform: uppercase;
+  font-style: italic;
+  color: black;
+  font-weight: 400;
+}
+
 
 @media screen and (max-width: 1024px) {
   .menuRightHolder {

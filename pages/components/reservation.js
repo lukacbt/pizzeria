@@ -5,11 +5,23 @@ import emailjs from 'emailjs-com'
 const Reservation = () => {
   const { reservationHolder, form, bottomFormHolder, succ, resTitle, disabled, error, reservationLeftHolder, date, time, option, reservationButton, input, textarea, reservationLeft, reservationRight } = styles
   const timeOfDay = ["Vrijeme rezervacije *", "16:00 h", "16:30 h", "17:00 h", "17:30 h", "18:00 h", "18:30 h", "19:00 h", "19:30 h", "20:00 h", "20:30 h", "21:00 h"]
-  const [ number, setNumber ] = useState(null)
+  const [ rForm, setForm ] = useState({broj: null, ime: ''})
   const [ success, setSuccess ] = useState(false)
 
   const handleChange = (e) => {
-    setNumber(e.target.value)
+    const { name, value } = e.target;
+    setForm(prev => ({
+      ...prev,
+      [name]: value
+    }))
+  }
+
+  const validateForm = () => {
+    if (rForm && rForm.broj?.length > 0 && rForm.ime.length > 0) {
+      return false
+    } else {
+      return true
+    }
   }
 
   const sendEmail = (e) => {
@@ -22,7 +34,7 @@ const Reservation = () => {
           console.log(error.text);
       });
     e.target.reset()
-    setNumber(null)
+    setForm({broj: null, ime: ''})
     setSuccess(true)
     setTimeout(() => {
       setSuccess(false)
@@ -34,7 +46,7 @@ const Reservation = () => {
       <div className={`${reservationLeftHolder}`}>
         <div className={`${reservationLeft}`}>
           <form className={`${form}`} onSubmit={sendEmail}>
-            <input className={`${input} roboto`} placeholder="Vaše ime i prezime" type="text" name="ime" />
+            <input onChange={handleChange} className={`${input} roboto`} placeholder="Vaše ime i prezime (Obavezno polje)" type="text" name="ime" />
             <input className={`${input} ${time} roboto`} placeholder="Datum rezervacije" type="date" name="datum" />
             <select className={`${input} ${date} roboto`} name="vrijeme">
               {
@@ -44,16 +56,11 @@ const Reservation = () => {
               }
             </select>
             <input className={`${input} roboto`} placeholder="Broj osoba" type="number" name="brojOsoba" />
-            <input onChange={handleChange} className={`${input} roboto`} placeholder="Vaš kontakt broj *" type="number" name="broj" />
-            {
-              !number 
-              &&
-              <span className={`${error} roboto`}>Obavezno polje</span>
-            }
+            <input onChange={handleChange} className={`${input} roboto`} placeholder="Vaš kontakt broj (Obavezno polje)" type="number" name="broj" />
             <input className={`${input} roboto`} placeholder="Vaša e-mail adresa" type="email" name="email" />
             <textarea className={`${input} ${textarea} roboto`} placeholder="Dodatna poruka ..." name="poruka" />
             <div className={`${bottomFormHolder}`}>
-              <button disabled={!number} className={`${reservationButton} ${!number && disabled} roboto`}>Pošalji upit</button>
+              <button disabled={validateForm()} className={`${reservationButton} ${validateForm() && disabled} roboto`}>Pošalji upit</button>
               {
                 success
                 &&
